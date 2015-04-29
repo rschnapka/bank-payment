@@ -73,7 +73,7 @@ class KskMT940Parser(MT940, parser):
                      'CREF', 'IREF', 'CNTP', 'ULTC', 'EXCH', 'CHGS']
         subfields = {}
         current_codeword = None
-        for word in data.split('/'):
+        for word in data.split('?'):
             if not word and not current_codeword:
                 continue
             if word in codewords:
